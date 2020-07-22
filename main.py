@@ -25,7 +25,7 @@ horizontalServo.ChangeDutyCycle(8.5)
 verticalServo.ChangeDutyCycle(8.5)
 time.sleep(2)
 
-#except KeyboardInterrupt:
+##except KeyboardInterrupt:
 horizontalServo.stop()
 verticalServo.stop()
 GPIO.cleanup()
