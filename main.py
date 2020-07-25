@@ -12,6 +12,8 @@ import time
 import random
 import pigpio
 import RPi.GPIO as GPIO    # Import Raspberry Pi GPIO library
+from laser import Laser
+import atexit
 
 NUM_GPIO = 32
 
@@ -23,7 +25,7 @@ width = [0] * NUM_GPIO
 used = [False] * NUM_GPIO
 
 pi = pigpio.pi()
-
+laser = Laser(4)
 if not pi.connected:
     exit()
 
@@ -32,6 +34,14 @@ G = [2,3]
 GPIO.setwarnings(False)    # Ignore warning for now
 GPIO.setmode(GPIO.BCM)   # Use physical pin numbering
 GPIO.setup(4, GPIO.OUT, initial=GPIO.LOW)   # Set pin 8 to be an output pin and set initial value to low (off)
+
+
+def pack_the_shit():
+    laser.turnOff()
+    print("dupa")
+
+
+atexit.register(pack_the_shit)
 for g in G:
     step[g] = 1
     width[g] = 1000
@@ -46,11 +56,11 @@ while True:
                 width[g] += step[g]
                 if g == 2:
                     if once:
-                        GPIO.output(4, GPIO.HIGH)  # Turn on
+                        laser.turnOn()
                         once = 0
                     else:
                         once = 1
-                        GPIO.output(4, GPIO.LOW)  # Turn on
+                        laser.turnOff()
 
         time.sleep(0.001)
     except KeyboardInterrupt:
@@ -58,6 +68,7 @@ while True:
 
 for g in G:
     pi.set_servo_pulsewidth(g, 0)
+
 
 pi.stop()
 
