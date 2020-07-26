@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 class Laser:
-    def __init__(self, pin):
+    def __init__(self, pin: int):
         self.pin = pin
         GPIO.setwarnings(False)  # Ignore warning for now
         GPIO.setmode(GPIO.BCM)  # Use physical pin numbering
@@ -12,4 +12,3 @@ class Laser:
 
     def turnOff(self):
         GPIO.output(self.pin, GPIO.LOW)
-
