@@ -22,10 +22,10 @@ def randomPathGenerator(dt: float, xCenter: float, yCenter: float ):
             xPosition += xVelocity * dt
             yPosition += yVelocity * dt
 
-            xVelocity += xAcceleration * dt #+ random.uniform(0, 0)
-            yVelocity += yAcceleration * dt #+ random.uniform(0, 0)
+            xVelocity += xAcceleration * dt #+ random.uniform(-0.01, 0.01)
+            yVelocity += yAcceleration * dt #+ random.uniform(-0.01, 0.01)
 
-            xAcceleration = (xCenter - xPosition) * harmonicRatioX + random.uniform(-0.01, 0.01)
-            yAcceleration = (yCenter - yPosition) * harmonicRatioY + random.uniform(-0.01, 0.01)
+            xAcceleration = (xCenter - xPosition) * harmonicRatioX + random.uniform(-10000, 10000)
+            yAcceleration = (yCenter - yPosition) * harmonicRatioY + random.uniform(-10000, 10000)
 
         yield xPosition, yPosition

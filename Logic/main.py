@@ -1,4 +1,3 @@
-
 import time
 from laser import Laser
 from gimbal import Gimbal
@@ -9,13 +8,14 @@ laser = Laser(4)
 gimbal = Gimbal(3, 2)
 generator = randomPathGenerator(0.0001, 90, 90)
 laser.turnOn()
-def pack_the_shit():
+
+
+def shutdownSystem():
     laser.turnOff()
-    print("dupa")
     gimbal.destroy()
 
 
-atexit.register(pack_the_shit)
+atexit.register(shutdownSystem)
 
 while True:
     tupla = next(generator)
