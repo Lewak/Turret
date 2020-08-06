@@ -6,8 +6,8 @@ class Laser:
         self.pin = pin
         GpioInterface.setup(self.pin, GpioInterface.OUT)
 
-    def turnOn(self):
+    def turnOn(self) -> None:
         GpioInterface.writePin(self.pin, True)
 
-    def turnOff(self):
+    def turnOff(self) -> None:
         GpioInterface.writePin(self.pin, False)

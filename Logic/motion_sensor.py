@@ -8,5 +8,3 @@ class MotionSensor:
 
     def isMotionDetected(self) -> bool:
         return GpioInterface.readPin(self.pin)
-
-
