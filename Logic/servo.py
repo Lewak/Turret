@@ -9,7 +9,7 @@ class Servo:
         self.pin = pin
         self.pinInterface = pigpio.pi()
 
-    def setAngle(self, angleDegrees: float):
+    def setAngle(self, angleDegrees: float): 
         position = angleDegrees*(Servo.maxPosition - Servo.minPosition)/180 + Servo.minPosition
         position = min(position, Servo.maxPosition)
         position = max(position, Servo.minPosition)
