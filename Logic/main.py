@@ -17,7 +17,7 @@ generator = randomPathGenerator(0.0001, 90, 90)
 laser.turnOn()
 os.chdir('audio')
 print(os.getcwd())
-
+print("test")
 print("Initialisation complete")
 audio = AudioInterface()
 played = 0

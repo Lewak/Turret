@@ -2,3 +2,9 @@ Logic/venv
 Logic/.vscode
 Logic/.idea
 .git
+
+venv/
+
+.idea/
+
+Logic/__pycache__/
