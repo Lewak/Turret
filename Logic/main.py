@@ -6,8 +6,8 @@ from motion_sensor import MotionSensor
 from random_path_generator import randomPathGenerator
 from gpio_interface import GpioInterface
 from audio_interface import AudioInterface
-from audio_interface import SoundTypes
-import os, sys
+from audio_interface import SfxTypes
+import os
 
 GpioInterface.initialise()
 motion_sensor = MotionSensor(14)
@@ -22,13 +22,6 @@ print("Initialisation complete")
 audio = AudioInterface()
 played = 0
 played2 = 0
-audio.playRandomEffect(SoundTypes.SEARCHING)
-time.sleep(2)
-audio.playRandomEffect(SoundTypes.TARGETLOST)
-time.sleep(2)
-audio.playRandomEffect(SoundTypes.SEARCHING)
-time.sleep(2)
-audio.playRandomEffect(SoundTypes.TARGETLOST)
 
 
 def shutdownSystem() -> None:
@@ -46,21 +39,14 @@ while True:
         tupla = next(generator)
         time.sleep(1/30)
         gimbal.setPosition(tupla[0], tupla[1])
-        #gimbal.setPosition(90, 90)
         played2 = 0
         if played == 0:
-            audio.playRandomEffect(SoundTypes.SEARCHING)
+            audio.playRandomEffect(SfxTypes.SEARCHING)
             played = 1
 
     else:
         laser.turnOff()
         played = 0
         if played2 == 0:
-            audio.playRandomEffect(SoundTypes.TARGETLOST)
+            audio.playRandomEffect(SfxTypes.TARGETLOST)
             played2 = 1
-
-    # laser.turnOn()
-    # time.sleep(1)
-    # laser.turnOff()
-    # gimbal.setPosition(90, 90)
-    # time.sleep(1)
