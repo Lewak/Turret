@@ -1,6 +1,17 @@
-from state import State
 import time
 
+
+class State:
+    def __init__(self):
+        pass
+    def routine(self) -> 'State':
+        pass
+
+    def enter(self) -> None:
+        pass
+
+    def leave(self) -> None:
+        pass
 
 class StateMachine:
     def __init__(self):
@@ -16,5 +27,9 @@ class StateMachine:
 
     def run(self) -> None:
         while True:
-            self.currentState.routine()
+            proceedCheck = self.currentState.routine()
+            if proceedCheck is not None:
+                self.switch_state(proceedCheck)
             time.sleep(1/30)
+
+
