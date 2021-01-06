@@ -7,12 +7,9 @@ import random
 import math
 
 
-class SearchingState(State):
+class FinishSearchingState(State):
 
     def __init__(self):
-        initAngle = random.uniform(0, 360)
-        initialXPosition = 90 + math.sin(initAngle) * 40
-        initialYPosition = 90 + math.cos(initAngle) * 40
         self.generator = randomPathGenerator(90, 90, initialXPosition, initialYPosition)
         self.timer = 0
 
@@ -20,7 +17,6 @@ class SearchingState(State):
         from sleep_state import SleepState
         positionX, positionY, stateProgress = next(self.generator)
         Peripherals.gimbal.setPosition(positionX, positionY)
-
 
     def enter(self) -> None:
         Peripherals.audio.playRandomEffect(SfxType.SEARCHING)

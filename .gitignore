@@ -1,6 +1,7 @@
 Logic/venv
 Logic/.vscode
 Logic/.idea
+backup
 .git
 
 venv/
