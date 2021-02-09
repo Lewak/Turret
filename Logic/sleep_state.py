@@ -13,6 +13,6 @@ class SleepState(State):
             return self
 
     def enter(self) -> None:
-        Peripherals.audio.playRandomEffect(SfxType.TARGETLOST)
+        Peripherals.audio.playRandomEffect(SfxType.SLEEPING)
         Peripherals.laser.turnOff()
 

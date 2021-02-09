@@ -5,7 +5,7 @@ from enum import Enum
 
 def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float, initialYPosition: float):
 
-    xPosition = initialXPosition  #marnowanie miejsca z uwagi na mącenie
+    xPosition = initialXPosition
     yPosition = initialYPosition
 
     xAcceleration = 0
@@ -29,13 +29,13 @@ def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float,
             xAcceleration = (xCenter - xPosition) * harmonicRatioX + random.uniform(-10000, 10000)
             yAcceleration = (yCenter - yPosition) * harmonicRatioY + random.uniform(-10000, 10000)
 
-        yield xPosition, yPosition + wobble(i)
+        yield xPosition, yPosition, False
 
+    yield xCenter, yCenter, True
 
-    yield xCenter, yCenter
 
 def wobbleGenerator():
-
+    x = 0
     while True:
         x = x+1
         yield math.sin(x * 0.6) * 50 / (((x * 0.15) ** 2) + 1)
