@@ -18,7 +18,7 @@ def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float,
     harmonicRatioY = 217
     dt = 0.0001
 
-    for i in range(100):
+    for i in range(141): #4.7 sekund, to jest do zmiany
         for _ in range(100):
             xPosition += xVelocity * dt
             yPosition += yVelocity * dt
