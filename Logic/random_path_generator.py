@@ -1,23 +1,25 @@
 import math
 import random
+from enum import Enum
 
 
-def randomPathGenerator(dt: float, xCenter: float, yCenter: float):
-    initAngle = random.uniform(0, 360)
-    xPosition = xCenter + math.sin(initAngle)*40
-    yPosition = yCenter + math.cos(initAngle)*40
+def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float, initialYPosition: float):
+
+    xPosition = initialXPosition
+    yPosition = initialYPosition
 
     xAcceleration = 0
     yAcceleration = 0
 
-    xVelocity = (yCenter - yPosition)*11
+    xVelocity = (yCenter - yPosition)*11  
     yVelocity = (xPosition - xCenter)*11
 
     harmonicRatioX = 83
     harmonicRatioY = 217
+    dt = 0.0001
 
-    while True:
-        for i in range(100):
+    for i in range(141): #4.7 sekund, to jest do zmiany
+        for _ in range(100):
             xPosition += xVelocity * dt
             yPosition += yVelocity * dt
 
@@ -27,4 +29,13 @@ def randomPathGenerator(dt: float, xCenter: float, yCenter: float):
             xAcceleration = (xCenter - xPosition) * harmonicRatioX + random.uniform(-10000, 10000)
             yAcceleration = (yCenter - yPosition) * harmonicRatioY + random.uniform(-10000, 10000)
 
-        yield xPosition, yPosition
+        yield xPosition, yPosition, False
+
+    yield xCenter, yCenter, True
+
+
+def wobbleGenerator():
+    x = 0
+    while True:
+        x = x+1
+        yield math.sin(x * 0.6) * 50 / (((x * 0.15) ** 2) + 1)
