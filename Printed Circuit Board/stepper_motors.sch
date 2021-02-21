@@ -49,7 +49,7 @@ AR Path="/603C2499" Ref="J?"  Part="1"
 AR Path="/603B418F/603C2499" Ref="J8"  Part="1" 
 F 0 "J8" H 8308 4681 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 8308 4590 50  0000 C CNN
-F 2 "" H 8200 4400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8200 4400 50  0001 C CNN
 F 3 "~" H 8200 4400 50  0001 C CNN
 	1    8200 4400
 	-1   0    0    1   
@@ -86,7 +86,7 @@ AR Path="/603C24AC" Ref="J?"  Part="1"
 AR Path="/603B418F/603C24AC" Ref="J7"  Part="1" 
 F 0 "J7" H 5658 4681 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 5658 4590 50  0000 C CNN
-F 2 "" H 5550 4400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5550 4400 50  0001 C CNN
 F 3 "~" H 5550 4400 50  0001 C CNN
 	1    5550 4400
 	-1   0    0    1   
@@ -112,7 +112,7 @@ AR Path="/603C24CC" Ref="R?"  Part="1"
 AR Path="/603B418F/603C24CC" Ref="R5"  Part="1" 
 F 0 "R5" V 6593 3950 50  0000 C CNN
 F 1 "R" V 6684 3950 50  0000 C CNN
-F 2 "" V 6730 3950 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6730 3950 50  0001 C CNN
 F 3 "~" H 6800 3950 50  0001 C CNN
 	1    6800 3950
 	0    1    1    0   
@@ -125,7 +125,7 @@ AR Path="/603C24D3" Ref="R?"  Part="1"
 AR Path="/603B418F/603C24D3" Ref="R7"  Part="1" 
 F 0 "R7" V 6593 4050 50  0000 C CNN
 F 1 "R" V 6684 4050 50  0000 C CNN
-F 2 "" V 6730 4050 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6730 4050 50  0001 C CNN
 F 3 "~" H 6800 4050 50  0001 C CNN
 	1    6800 4050
 	0    1    1    0   
@@ -148,7 +148,7 @@ AR Path="/603D354E" Ref="R?"  Part="1"
 AR Path="/603B418F/603D354E" Ref="R4"  Part="1" 
 F 0 "R4" V 3893 4050 50  0000 C CNN
 F 1 "R" V 3984 4050 50  0000 C CNN
-F 2 "" V 4030 4050 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4030 4050 50  0001 C CNN
 F 3 "~" H 4100 4050 50  0001 C CNN
 	1    4100 4050
 	0    1    1    0   
@@ -163,7 +163,7 @@ AR Path="/603D41C9" Ref="R?"  Part="1"
 AR Path="/603B418F/603D41C9" Ref="R3"  Part="1" 
 F 0 "R3" V 3893 3950 50  0000 C CNN
 F 1 "R" V 3984 3950 50  0000 C CNN
-F 2 "" V 4030 3950 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4030 3950 50  0001 C CNN
 F 3 "~" H 4100 3950 50  0001 C CNN
 	1    4100 3950
 	0    1    1    0   
@@ -191,12 +191,12 @@ STEP_1
 Text HLabel 4300 4450 0    50   Input ~ 0
 DIR_1
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J?
+L Connector_Generic:Conn_02x03_Odd_Even J11
 U 1 1 6031900F
 P 6500 4750
-F 0 "J?" H 6550 5067 50  0000 C CNN
+F 0 "J11" H 6550 5067 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 6550 4976 50  0000 C CNN
-F 2 "" H 6500 4750 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 6500 4750 50  0001 C CNN
 F 3 "~" H 6500 4750 50  0001 C CNN
 	1    6500 4750
 	1    0    0    -1  
@@ -230,12 +230,12 @@ Wire Wire Line
 	6200 4850 6300 4850
 Connection ~ 6200 4750
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J?
+L Connector_Generic:Conn_02x03_Odd_Even J9
 U 1 1 60322CE9
 P 3850 4750
-F 0 "J?" H 3900 5067 50  0000 C CNN
+F 0 "J9" H 3900 5067 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 3900 4976 50  0000 C CNN
-F 2 "" H 3850 4750 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Horizontal" H 3850 4750 50  0001 C CNN
 F 3 "~" H 3850 4750 50  0001 C CNN
 	1    3850 4750
 	1    0    0    -1  

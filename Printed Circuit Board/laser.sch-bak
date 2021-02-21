@@ -21,7 +21,7 @@ AR Path="/60392143" Ref="R?"  Part="1"
 AR Path="/6037EE41/60392143" Ref="R6"  Part="1" 
 F 0 "R6" V 3043 2250 50  0000 C CNN
 F 1 "R" V 3134 2250 50  0000 C CNN
-F 2 "" V 3180 2250 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3180 2250 50  0001 C CNN
 F 3 "~" H 3250 2250 50  0001 C CNN
 	1    3250 2250
 	0    1    1    0   
@@ -56,7 +56,7 @@ AR Path="/60392154" Ref="J?"  Part="1"
 AR Path="/6037EE41/60392154" Ref="J4"  Part="1" 
 F 0 "J4" H 3928 1776 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 3928 1685 50  0000 L CNN
-F 2 "" H 3900 1800 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3900 1800 50  0001 C CNN
 F 3 "~" H 3900 1800 50  0001 C CNN
 	1    3900 1800
 	1    0    0    -1  
