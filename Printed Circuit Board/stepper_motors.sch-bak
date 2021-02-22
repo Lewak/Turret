@@ -48,7 +48,7 @@ P 8200 4400
 AR Path="/603C2499" Ref="J?"  Part="1" 
 AR Path="/603B418F/603C2499" Ref="J8"  Part="1" 
 F 0 "J8" H 8308 4681 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 8308 4590 50  0000 C CNN
+F 1 "stepper motor connector (2)" H 8308 4590 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8200 4400 50  0001 C CNN
 F 3 "~" H 8200 4400 50  0001 C CNN
 	1    8200 4400
@@ -85,7 +85,7 @@ P 5550 4400
 AR Path="/603C24AC" Ref="J?"  Part="1" 
 AR Path="/603B418F/603C24AC" Ref="J7"  Part="1" 
 F 0 "J7" H 5658 4681 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 5658 4590 50  0000 C CNN
+F 1 "stepper motor connector (1)" H 5658 4590 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5550 4400 50  0001 C CNN
 F 3 "~" H 5550 4400 50  0001 C CNN
 	1    5550 4400
@@ -98,7 +98,7 @@ P 7350 4250
 AR Path="/603C24C6" Ref="A?"  Part="1" 
 AR Path="/603B418F/603C24C6" Ref="A2"  Part="1" 
 F 0 "A2" H 7350 5031 50  0000 C CNN
-F 1 "Pololu_Breakout_DRV8825" H 7350 4940 50  0000 C CNN
+F 1 "stepper driver DRV8825 (2)" H 7350 4940 50  0000 C CNN
 F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 7550 3450 50  0001 L CNN
 F 3 "https://www.pololu.com/product/2982" H 7450 3950 50  0001 C CNN
 	1    7350 4250
@@ -109,8 +109,8 @@ L Device:R R?
 U 1 1 603C24CC
 P 6800 3950
 AR Path="/603C24CC" Ref="R?"  Part="1" 
-AR Path="/603B418F/603C24CC" Ref="R5"  Part="1" 
-F 0 "R5" V 6593 3950 50  0000 C CNN
+AR Path="/603B418F/603C24CC" Ref="RST_R_2"  Part="1" 
+F 0 "RST_R_2" V 6593 3950 50  0000 C CNN
 F 1 "R" V 6684 3950 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6730 3950 50  0001 C CNN
 F 3 "~" H 6800 3950 50  0001 C CNN
@@ -124,7 +124,7 @@ P 6800 4050
 AR Path="/603C24D3" Ref="R?"  Part="1" 
 AR Path="/603B418F/603C24D3" Ref="R7"  Part="1" 
 F 0 "R7" V 6593 4050 50  0000 C CNN
-F 1 "R" V 6684 4050 50  0000 C CNN
+F 1 "SLP_R_2" V 6684 4050 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6730 4050 50  0001 C CNN
 F 3 "~" H 6800 4050 50  0001 C CNN
 	1    6800 4050
@@ -145,8 +145,8 @@ L Device:R R?
 U 1 1 603D354E
 P 4100 4050
 AR Path="/603D354E" Ref="R?"  Part="1" 
-AR Path="/603B418F/603D354E" Ref="R4"  Part="1" 
-F 0 "R4" V 3893 4050 50  0000 C CNN
+AR Path="/603B418F/603D354E" Ref="SLP_R_1"  Part="1" 
+F 0 "SLP_R_1" V 3893 4050 50  0000 C CNN
 F 1 "R" V 3984 4050 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 4030 4050 50  0001 C CNN
 F 3 "~" H 4100 4050 50  0001 C CNN
@@ -160,8 +160,8 @@ L Device:R R?
 U 1 1 603D41C9
 P 4100 3950
 AR Path="/603D41C9" Ref="R?"  Part="1" 
-AR Path="/603B418F/603D41C9" Ref="R3"  Part="1" 
-F 0 "R3" V 3893 3950 50  0000 C CNN
+AR Path="/603B418F/603D41C9" Ref="RST_R_1"  Part="1" 
+F 0 "RST_R_1" V 3893 3950 50  0000 C CNN
 F 1 "R" V 3984 3950 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 4030 3950 50  0001 C CNN
 F 3 "~" H 4100 3950 50  0001 C CNN
@@ -195,18 +195,14 @@ L Connector_Generic:Conn_02x03_Odd_Even J11
 U 1 1 6031900F
 P 6500 4750
 F 0 "J11" H 6550 5067 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 6550 4976 50  0000 C CNN
+F 1 "stepper driver M jumper (2)" H 6550 4976 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 6500 4750 50  0001 C CNN
 F 3 "~" H 6500 4750 50  0001 C CNN
 	1    6500 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6800 4650 6950 4650
-Wire Wire Line
 	6800 4750 6950 4750
-Wire Wire Line
-	6950 4850 6800 4850
 Wire Wire Line
 	6300 4650 6200 4650
 Wire Wire Line
@@ -234,18 +230,14 @@ L Connector_Generic:Conn_02x03_Odd_Even J9
 U 1 1 60322CE9
 P 3850 4750
 F 0 "J9" H 3900 5067 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 3900 4976 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Horizontal" H 3850 4750 50  0001 C CNN
+F 1 "stepper driver M jumper (1)" H 3900 4976 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 3850 4750 50  0001 C CNN
 F 3 "~" H 3850 4750 50  0001 C CNN
 	1    3850 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 4650 4300 4650
-Wire Wire Line
 	4150 4750 4300 4750
-Wire Wire Line
-	4300 4850 4150 4850
 Wire Wire Line
 	3650 4650 3550 4650
 Wire Wire Line
@@ -265,7 +257,7 @@ P 4700 4250
 AR Path="/603C24B3" Ref="A?"  Part="1" 
 AR Path="/603B418F/603C24B3" Ref="A1"  Part="1" 
 F 0 "A1" H 4700 5031 50  0000 C CNN
-F 1 "Pololu_Breakout_DRV8825" H 4700 4940 50  0000 C CNN
+F 1 "stepper driver DRV8825 (1)" H 4700 4940 50  0000 C CNN
 F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 4900 3450 50  0001 L CNN
 F 3 "https://www.pololu.com/product/2982" H 4800 3950 50  0001 C CNN
 	1    4700 4250
@@ -283,4 +275,32 @@ Wire Wire Line
 Connection ~ 3550 4050
 Wire Wire Line
 	3550 4050 3550 4650
+Wire Wire Line
+	4150 4650 4250 4650
+Wire Wire Line
+	4250 4650 4250 4850
+Wire Wire Line
+	4250 4850 4300 4850
+Wire Wire Line
+	4300 4650 4300 4700
+Wire Wire Line
+	4300 4700 4200 4700
+Wire Wire Line
+	4200 4700 4200 4850
+Wire Wire Line
+	4200 4850 4150 4850
+Wire Wire Line
+	6800 4650 6900 4650
+Wire Wire Line
+	6900 4650 6900 4850
+Wire Wire Line
+	6900 4850 6950 4850
+Wire Wire Line
+	6950 4650 6950 4700
+Wire Wire Line
+	6950 4700 6850 4700
+Wire Wire Line
+	6850 4700 6850 4850
+Wire Wire Line
+	6850 4850 6800 4850
 $EndSCHEMATC

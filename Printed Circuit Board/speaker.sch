@@ -76,7 +76,7 @@ P 6300 3550
 AR Path="/603AD9E3" Ref="J?"  Part="1" 
 AR Path="/603AA30A/603AD9E3" Ref="J2"  Part="1" 
 F 0 "J2" H 6408 3931 50  0000 C CNN
-F 1 "speaker_connector" H 6408 3840 50  0000 C CNN
+F 1 "speaker connector" H 6408 3840 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 6300 3550 50  0001 C CNN
 F 3 "~" H 6300 3550 50  0001 C CNN
 	1    6300 3550

@@ -18,8 +18,8 @@ L Device:R R?
 U 1 1 60392143
 P 3250 2250
 AR Path="/60392143" Ref="R?"  Part="1" 
-AR Path="/6037EE41/60392143" Ref="R6"  Part="1" 
-F 0 "R6" V 3043 2250 50  0000 C CNN
+AR Path="/6037EE41/60392143" Ref="laser_R1"  Part="1" 
+F 0 "laser_R1" V 3043 2250 50  0000 C CNN
 F 1 "R" V 3134 2250 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 3180 2250 50  0001 C CNN
 F 3 "~" H 3250 2250 50  0001 C CNN
@@ -42,7 +42,7 @@ P 3600 2250
 AR Path="/6039214E" Ref="Q?"  Part="1" 
 AR Path="/6037EE41/6039214E" Ref="Q2"  Part="1" 
 F 0 "Q2" H 3790 2296 50  0000 L CNN
-F 1 "2N2219" H 3790 2205 50  0000 L CNN
+F 1 "laser transistor" H 3790 2205 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-39-3" H 3800 2175 50  0001 L CIN
 F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 3600 2250 50  0001 L CNN
 	1    3600 2250
@@ -55,7 +55,7 @@ P 3900 1800
 AR Path="/60392154" Ref="J?"  Part="1" 
 AR Path="/6037EE41/60392154" Ref="J4"  Part="1" 
 F 0 "J4" H 3928 1776 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 3928 1685 50  0000 L CNN
+F 1 "laser connector" H 3928 1685 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3900 1800 50  0001 C CNN
 F 3 "~" H 3900 1800 50  0001 C CNN
 	1    3900 1800

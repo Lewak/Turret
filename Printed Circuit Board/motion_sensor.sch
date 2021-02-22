@@ -22,7 +22,7 @@ P 5450 2800
 AR Path="/6031C105" Ref="J?"  Part="1" 
 AR Path="/6034BB4B/6031C105" Ref="J10"  Part="1" 
 F 0 "J10" H 5478 2826 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 5478 2735 50  0000 L CNN
+F 1 "motion detector connector" H 5478 2735 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5450 2800 50  0001 C CNN
 F 3 "~" H 5450 2800 50  0001 C CNN
 	1    5450 2800

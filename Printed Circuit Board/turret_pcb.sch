@@ -104,13 +104,13 @@ Text Label 2850 1200 0    50   ~ 0
 Text Label 2850 1350 0    50   ~ 0
 5V
 Text Label 2850 1500 0    50   ~ 0
-GPIO10
-Text Label 2850 1650 0    50   ~ 0
 GPIO22
+Text Label 2850 1650 0    50   ~ 0
+GPIO10
 Text Label 2850 1800 0    50   ~ 0
-GPIO27
-Text Label 2850 1950 0    50   ~ 0
 GPIO17
+Text Label 2850 1950 0    50   ~ 0
+GPIO27
 Text Label 2850 2100 0    50   ~ 0
 5V_GND
 Text Label 2850 2250 0    50   ~ 0

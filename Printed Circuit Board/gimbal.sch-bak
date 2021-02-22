@@ -28,7 +28,7 @@ P 6800 3400
 AR Path="/6039FDDF" Ref="J?"  Part="1" 
 AR Path="/6039BD63/6039FDDF" Ref="J6"  Part="1" 
 F 0 "J6" H 6908 3681 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 6908 3590 50  0000 C CNN
+F 1 "vertical servo connector" H 6908 3590 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6800 3400 50  0001 C CNN
 F 3 "~" H 6800 3400 50  0001 C CNN
 	1    6800 3400
@@ -41,7 +41,7 @@ P 5550 3400
 AR Path="/6039FDE5" Ref="J?"  Part="1" 
 AR Path="/6039BD63/6039FDE5" Ref="J5"  Part="1" 
 F 0 "J5" H 5658 3681 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 5658 3590 50  0000 C CNN
+F 1 "horizontal servo connector" H 5658 3590 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5550 3400 50  0001 C CNN
 F 3 "~" H 5550 3400 50  0001 C CNN
 	1    5550 3400
