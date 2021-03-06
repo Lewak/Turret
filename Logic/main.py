@@ -4,15 +4,15 @@ from state_machine import StateMachine
 from sleep_state import SleepState
 
 
-def shutdownSystem() -> None:
+try:
+    Peripherals.initialise()
+    print("Attention evacuation emergency all personnel must evacuate immediately")
+
+    stateMachine = StateMachine()
+    stateMachine.set_inital_state(SleepState())
+    stateMachine.run()
+except KeyboardInterrupt:
+    pass
+finally:
     Peripherals.destroy()
     print("Shutdown complete")
-
-
-atexit.register(shutdownSystem)
-Peripherals.initialise()
-print("Attention evacuation emergency all personnel must evacuate immediately")
-
-stateMachine = StateMachine()
-stateMachine.set_inital_state(SleepState())
-stateMachine.run()
