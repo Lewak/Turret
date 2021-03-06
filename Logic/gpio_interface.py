@@ -1,31 +1,38 @@
-import RPi.GPIO as GPIO
-from enum import Enum
+import pigpio
 
 
-class GpioInterface(Enum):
+class GpioInterface:
+
     IN = 0
     OUT = 1
+    _pi = None
 
     @staticmethod
     def initialise() -> None:
-        GPIO.setwarnings(False)  # Ignore warning for now
-        GPIO.setmode(GPIO.BCM)  # Use physical pin numbering
+        GpioInterface._pi = pigpio.pi()
 
     @staticmethod
     def destroy() -> None:
-        GPIO.cleanup()
+        GpioInterface._pi.stop()
 
     @staticmethod
     def setup(pin: int, direction: 'GpioInterface') -> None:
         if direction == GpioInterface.IN:
-            GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+            GpioInterface._pi.set_mode(pin, pigpio.INPUT)
+            GpioInterface._pi.set_pull_up_down(pin, pigpio.PUD_UP)
+
         else:
-            GPIO.setup(pin, GPIO.OUT, initial=GPIO.LOW)
+            GpioInterface._pi.set_mode(pin, pigpio.OUTPUT)
+            GpioInterface._pi.write(pin, 0)
 
     @staticmethod
     def readPin(pin: int) -> bool:
-        return GPIO.input(pin)
+        return GpioInterface._pi.read(pin)
 
     @staticmethod
     def writePin(pin: int, state: bool) -> None:
-        GPIO.output(pin, GPIO.HIGH if state else GPIO.LOW)
+        GpioInterface._pi.write(pin, 1 if state else 0)
+
+    @staticmethod
+    def setServoPosition(pin: int, position: float) -> None:
+        GpioInterface._pi.set_servo_pulsewidth(pin, position)

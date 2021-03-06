@@ -25,6 +25,5 @@ class Peripherals:
     @staticmethod
     def destroy():
         Peripherals.laser.turnOff()
-        GpioInterface.destroy()
         Peripherals.gimbal.destroy()
-
+        GpioInterface.destroy()
