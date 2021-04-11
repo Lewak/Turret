@@ -5,6 +5,7 @@ from motion_sensor import MotionSensor
 from gpio_interface import GpioInterface
 from audio_interface import AudioInterface
 from button import Button
+from stepper_motor import StepperMotor
 
 
 class Peripherals:
@@ -14,6 +15,7 @@ class Peripherals:
     gimbal = None
     audio = None
     button = None
+    motorHorizontal = None
 
     @staticmethod
     def initialise():
@@ -24,9 +26,11 @@ class Peripherals:
         Peripherals.gimbal = Gimbal(3, 2)
         Peripherals.audio = AudioInterface()
         Peripherals.button = Button(15)
+        Peripherals.motorHorizontal = StepperMotor(17, 27)
 
     @staticmethod
     def destroy():
+        Peripherals.motorHorizontal.destroy()
         Peripherals.laser.turnOff()
         Peripherals.gimbal.destroy()
         GpioInterface.destroy()
