@@ -1,4 +1,3 @@
-
 from laser import Laser
 from gimbal import Gimbal
 from motion_sensor import MotionSensor
@@ -8,7 +7,6 @@ from button import Button
 
 
 class Peripherals:
-
     motion_sensor: MotionSensor = None
     laser: Laser = None
     gimbal: Gimbal = None
