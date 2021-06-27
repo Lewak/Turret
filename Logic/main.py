@@ -9,7 +9,7 @@ try:
     print("Attention evacuation emergency all personnel must evacuate immediately")
 
     stateMachine = StateMachine()
-    stateMachine.set_inital_state(SleepState())
+    stateMachine.set_initial_state(SleepState())
     stateMachine.run()
 except KeyboardInterrupt:
     pass

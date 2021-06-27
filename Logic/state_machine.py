@@ -3,7 +3,6 @@ from peripherals import Peripherals
 
 
 class State:
-
     def routine(self) -> 'State':
         pass
 
@@ -18,7 +17,7 @@ class StateMachine:
     def __init__(self):
         self.currentState = None
 
-    def set_inital_state(self, initialState: State):
+    def set_initial_state(self, initialState: State):
         self.currentState = initialState
 
     def switch_state(self, nextState: 'State') -> None:
@@ -28,9 +27,8 @@ class StateMachine:
 
     def run(self) -> None:
         while not Peripherals.button.isPressed():
+            print(Peripherals.motion_sensor.isMotionDetected())
             nextState = self.currentState.routine()
             if nextState is not self.currentState:
                 self.switch_state(nextState)
             time.sleep(1/30)
-
-

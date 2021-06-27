@@ -9,11 +9,11 @@ from button import Button
 
 class Peripherals:
 
-    motion_sensor = None
-    laser = None
-    gimbal = None
-    audio = None
-    button = None
+    motion_sensor: MotionSensor = None
+    laser: Laser = None
+    gimbal: Gimbal = None
+    audio: AudioInterface = None
+    button: Button = None
 
     @staticmethod
     def initialise():
