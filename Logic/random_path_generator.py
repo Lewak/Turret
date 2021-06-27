@@ -1,6 +1,5 @@
 import math
 import random
-from enum import Enum
 
 
 def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float, initialYPosition: float):
@@ -18,7 +17,7 @@ def randomPathGenerator(xCenter: float, yCenter: float, initialXPosition: float,
     harmonicRatioY = 217
     dt = 0.0001
 
-    for i in range(141): #4.7 sekund, to jest do zmiany
+    for i in range(141): # TODO 4.7 seconds, subject to change
         for _ in range(100):
             xPosition += xVelocity * dt
             yPosition += yVelocity * dt

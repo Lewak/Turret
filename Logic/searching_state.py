@@ -9,14 +9,12 @@ import math
 
 
 class SearchingState(State):
-
     def __init__(self):
         initAngle = random.uniform(0, 360)
         initialXPosition = 90 + math.sin(initAngle) * 40
         initialYPosition = 90 + math.cos(initAngle) * 40
         self.wobbler = wobbleGenerator()
         self.pathGenerator = randomPathGenerator(90, 90, initialXPosition, initialYPosition)
-        self.timer = 0
 
     def routine(self) -> State:
         positionX, positionY, isFinished = next(self.pathGenerator)

@@ -7,7 +7,6 @@ from sleep_state import SleepState
 try:
     Peripherals.initialise()
     print("Attention evacuation emergency all personnel must evacuate immediately")
-
     stateMachine = StateMachine()
     stateMachine.set_initial_state(SleepState())
     stateMachine.run()
