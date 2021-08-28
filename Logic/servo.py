@@ -12,7 +12,7 @@ class Servo:
         position = angleDegrees*(Servo._maxPosition - Servo._minPosition)/180 + Servo._minPosition
         position = min(position, Servo._maxPosition)
         position = max(position, Servo._minPosition)
-        GpioInterface.setServoPosition(self.pin, position)
+        GpioInterface.setServoPosition(self.pin, int(position))
 
     def destroy(self) -> None:
         pass

@@ -1,5 +1,6 @@
 from servo import Servo
 
+
 class Gimbal:
     def __init__(self, pinServoHorizontal: int, pinServoVertical: int):
         self.servoHorizontal = Servo(pinServoHorizontal)
