@@ -20,6 +20,8 @@ class Peripherals:
         Peripherals.laser = Laser(4)
         Peripherals.laser.turnOff()
         Peripherals.gimbal = Gimbal(3, 2)
+        # used audio pins (PCM): 19 (LRC); 18 (BCLK); 21 (DIN)
+        # https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring
         Peripherals.audio = AudioInterface()
         Peripherals.button = Button(15)
 
