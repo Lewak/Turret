@@ -4,6 +4,7 @@ Logic/.idea
 backup
 .git
 Printed Circuit Board/fp-info-cache
+Printed Circuit Board/turret_pcb-backups
 venv/
 
 .idea/
