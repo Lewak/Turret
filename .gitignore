@@ -1,12 +1,12 @@
+.git
+.idea/
+backup
+venv/
+Logic/__pycache__/
 Logic/venv
 Logic/.vscode
 Logic/.idea
-backup
-.git
 Printed Circuit Board/fp-info-cache
 Printed Circuit Board/turret_pcb-backups
-venv/
+Printed Circuit Board/turret_pcb.kicad_prl
 
-.idea/
-
-Logic/__pycache__/
