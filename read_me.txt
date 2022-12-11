@@ -23,3 +23,7 @@ vol.2 DŹWIĘK I IO
 vol.3 PROCEDURA URUCHAMIANIA TURRETA
 	1. Wpisać login i password w deployment w file->settings->deployment: login:pi hasło: raspberry
 	2. Prawy przycisk na pliki programu i deployment->send to raspberrypi
+vol.4 PROCEDURA URUCHAMIANIA PŁYKI ENDERA
+	1. Zainstalować środowisko kombatybilne z Arduino (np Visual Studio Code z pluginem). 
+	2. Zainstalować boardy Sanguino
+	3. Przed uploadem ustawić port COM, ustawić płytkę Sanguino z procesorem Atmega1284 16Mhz.
