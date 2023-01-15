@@ -1,11 +1,11 @@
 .git
 .idea/
-backup
+raspberry_sd_card_memory_backup
 venv/
-Logic/__pycache__/
-Logic/venv
-Logic/.vscode
-Logic/.idea
+LogicRaspberry/__pycache__/
+LogicRaspberry/venv
+LogicRaspberry/.vscode
+LogicRaspberry/.idea
 Printed Circuit Board/fp-info-cache
 Printed Circuit Board/turret_pcb-backups
 Printed Circuit Board/turret_pcb.kicad_prl
