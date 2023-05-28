@@ -1,0 +1,2 @@
+void halInit();
+double readAngle();

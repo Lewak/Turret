@@ -1,7 +1,7 @@
 {
-    "configuration": "PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,DebugLevel=verbose",
+    "configuration": "PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=115200,DebugLevel=verbose",
     "board": "esp32:esp32:esp32",
-    "sketch": "src\\main.ino",
+    "sketch": "main\\main.ino",
     "port": "COM4",
     "output": "build"
 }
