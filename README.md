@@ -1,4 +1,4 @@
-# INSTRUKCJA DLA IDIOTÓW
+# INSTRUKCJA
 ## vol.1 RASPBERRY JAKO ETHERNET GADGET
 1. Podłączyć raspberry za pomocą kabla USB (DO PORTU USBIN nie USB POWER!)
 2. Sprawdzić w menadżerze urządzeń czy jest wykrywany jako usb ethernet gadget. Jak tak, przejść do kroku 6
