@@ -1,6 +1,6 @@
 .git
 .idea/
-raspberry_sd_card_memory_backup
+raspberry_sd_card_memory_backup.img
 venv/
 LogicRaspberry/__pycache__/
 LogicRaspberry/venv

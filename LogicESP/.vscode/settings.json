@@ -36,7 +36,8 @@
         "cinttypes": "cpp",
         "utility": "cpp",
         "typeinfo": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.default.configurationProvider": "\"null\"",
     "arduino.disableIntelliSenseAutoGen": true

@@ -5,3 +5,4 @@
 using namespace std;
 
 std::vector<string> split(const string &s, char delim);
+int clampValue (int value, int min, int max);

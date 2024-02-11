@@ -1,7 +1,7 @@
 from peripherals import Peripherals
 from audio_interface import SfxType
 from state_machine import State
-
+from serial_interface import Serial
 
 class SleepState(State):
     def routine(self) -> State:

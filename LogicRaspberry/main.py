@@ -10,7 +10,10 @@ try:
     stateMachine = StateMachine()
     stateMachine.set_initial_state(SleepState())
     stateMachine.run()
+except Exception as e:
+    print("An error occurred:", e)
 except KeyboardInterrupt:
+    print("key")
     pass
 finally:
     Peripherals.destroy()

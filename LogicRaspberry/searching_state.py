@@ -1,4 +1,5 @@
 from peripherals import Peripherals
+from serial_interface import Serial
 from audio_interface import SfxType
 from random_path_generator import randomPathGenerator
 from random_path_generator import wobbleGenerator
@@ -19,6 +20,8 @@ class SearchingState(State):
     def routine(self) -> State:
         positionX, positionY, isFinished = next(self.pathGenerator)
         Peripherals.gimbal.setPosition(positionX, positionY + next(self.wobbler))
+        Serial.sendMessage("SET " + str(positionY + next(self.wobbler)) + "\n")
+
         if isFinished:
             return FinishSearchingState()
         else:

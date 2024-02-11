@@ -1,6 +1,0 @@
-{
-    "configuration": "cpu=atmega1284p",
-    "board": "Sanguino:avr:sanguino",
-    "sketch": "main\\main.ino",
-    "port": "COM3"
-}

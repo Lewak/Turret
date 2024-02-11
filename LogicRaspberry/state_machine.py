@@ -1,6 +1,7 @@
 import time
 from peripherals import Peripherals
 
+
 class State:
     def routine(self) -> 'State':
         pass
@@ -25,7 +26,8 @@ class StateMachine:
         self.currentState.enter()
 
     def run(self) -> None:
-        while not Peripherals.button.isPressed():
+        # while not Peripherals.button.isPressed():
+        while True:
             nextState = self.currentState.routine()
             if nextState is not self.currentState:
                 self.switch_state(nextState)

@@ -4,6 +4,7 @@
 #include "utils.h"
 #include "hal.h"
 #include "serialCommunication.h"
+#include "serialCommunication1.h"
 using namespace std;
 
 #define LED 2
@@ -17,12 +18,14 @@ using namespace std;
 #define MOT_ANG_MIN_DEG 5
 #define MOT_ANG_MAX_DEG 175
 
-int motorSpeed = 0;
-int desiredAngle = 0;
+int positionCounter = 0; // temp
+int motorSpeed = 15;
+int desiredAngle = 90;
 
 void setup()
 {
     serialInit();
+    serial1Init();
     halInit();
     pinMode(LED, OUTPUT);
     pinMode(M0_Y, OUTPUT);
@@ -42,27 +45,26 @@ void setup()
 
 void loop()
 {
-    double angle = readAngle();
-    serialRead([](string code, vector<int> parameters){
-
-        if (code == "AIM")
-        {
-            motorSpeed = parameters[0];
-        }
-        else if (code == "SET")
+    double angle = mockReadAngle();
+    serial1Read([](string code, vector<int> parameters){
+        if (code == "SET")
         {
             desiredAngle = clampValue(parameters[0], MOT_ANG_MIN_DEG, MOT_ANG_MAX_DEG);
-            Serial.print("New Angle: ");                                                                                                    
-            Serial.println(desiredAngle);
-
-        }});
+        }
+    });
        
     if ((desiredAngle < angle - 0.2) || (desiredAngle > angle + 0.2))
     {
         if (desiredAngle - angle > 0)
+        {
             digitalWrite(DIR_Y, LOW);
+            positionCounter++;
+        }
         else
+        {
             digitalWrite(DIR_Y, HIGH);
+            positionCounter--;
+        }
         digitalWrite(STEP_X, HIGH);
         digitalWrite(STEP_Y, HIGH);
         delayMicroseconds(motorSpeed);
@@ -72,3 +74,10 @@ void loop()
     }
 }
 
+double mockReadAngle()
+{
+    float gearRatio = 10;
+    float stepsPerRevolution = 200;
+    float microsteps = 32;
+    return positionCounter / gearRatio * (360.0 / (stepsPerRevolution * microsteps)) + 90;
+}

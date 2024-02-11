@@ -4,6 +4,7 @@ from motion_sensor import MotionSensor
 from gpio_interface import GpioInterface
 from audio_interface import AudioInterface
 from button import Button
+from serial_interface import Serial
 
 
 class Peripherals:
@@ -16,7 +17,9 @@ class Peripherals:
     @staticmethod
     def initialise():
         GpioInterface.initialise()
-        Peripherals.motion_sensor = MotionSensor(14)
+        # used serial pins: GPIO14; GPIO15
+        Serial.initialise()
+        Peripherals.motion_sensor = MotionSensor(23)
         Peripherals.laser = Laser(4)
         Peripherals.laser.turnOff()
         Peripherals.gimbal = Gimbal(3, 2)
@@ -30,3 +33,4 @@ class Peripherals:
         Peripherals.laser.turnOff()
         Peripherals.gimbal.destroy()
         GpioInterface.destroy()
+        Serial.destroy()
