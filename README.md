@@ -23,6 +23,7 @@
 ## vol.3 PROCEDURA URUCHAMIANIA TURRETA
 1. Wpisać login i password w deployment w file->settings->deployment: login:pi hasło: raspberry
 2. Prawy przycisk na pliki programu i deployment->send to raspberrypi
+3. Jak jest problem z serial permission denied: sudo chmod 666 /dev/ttyAMA0
 
 ## vol.4 PROCEDURA URUCHAMIANIA PŁYKI ENDERA
 1. Zainstalować środowisko kombatybilne z Arduino (np Visual Studio Code z pluginem). 

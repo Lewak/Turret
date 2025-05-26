@@ -3,7 +3,7 @@ using namespace std;
 #include <Wire.h>
 #define HAL1_ADDRESS 0x36
 #define HAL_ANGLE_REGISTER 0x0E
-
+// https://randomnerdtutorials.com/esp32-i2c-communication-arduino-ide/
 
 void halInit()
 {
